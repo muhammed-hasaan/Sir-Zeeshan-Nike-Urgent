@@ -25,7 +25,7 @@ const Login = () => {
 
    if (email === values.email && pass === values.password) {
     localStorage.setItem('isActive','true')
-    navigate('/').then(() => window.location.reload())
+    navigate('/admin').then(() => window.location.reload())
    }else {
     message.error('Invalid Cred ')
    }
