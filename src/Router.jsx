@@ -18,14 +18,13 @@ import GeneralSettings from "./pages/admin/generalSettings/GeneralSettings";
 import ShippingSettings from "./pages/admin/shippingSettings/ShippingSettings";
 import TaxSettings from "./pages/admin/taxSettings/TaxSettings";
 import Login from "./pages/auth/login/Login";
-import PrivateRoute from "./PrivateRoute";
 
 
 const isActive = localStorage.getItem('isActive')
 
 const router = createBrowserRouter([
- isActive === 'true'?  {
-    path: "/",
+ isActive === 'true' ?  {
+    path: "/admin",
     // element: <PrivateRoute element={<AdminLayout/>} allowIsActive={['true']}/>,
     element:<AdminLayout/>,
     children: [
@@ -101,7 +100,7 @@ const router = createBrowserRouter([
     ],
   }:
   {
-    path: "/login",
+    path: "/",
     element: <Login />,
   },
 ]);
