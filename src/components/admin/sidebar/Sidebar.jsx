@@ -129,7 +129,7 @@ const AdminSidebar = ({ open, setOpen }) => {
 
   const logout = () => {
     localStorage.setItem('isActive','false')
-    navigate('/login')
+    navigate('/')
   }
   
   return (
